@@ -47,6 +47,27 @@ namespace MyPortfolioUdemy.Migrations
                     b.ToTable("Abouts");
                 });
 
+            modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"), 1L, 1);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("TblAdmin");
+                });
+
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Contact", b =>
                 {
                     b.Property<int>("ContactId")

@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<h2>Admin Panel Dashboard</h2>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Kullanıcı Kartı -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>Kullanıcı Sayısı:</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h2>@ViewBag.adminCount</h2>
+                    <p>Toplam Kullanıcı</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sipariş Kartı -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>Yetenekler</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h2>@ViewBag.skillCount</h2>
+                    <p>Toplam Yetenek</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yeni Kart Ekleyebilirsiniz -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>Deneyimler</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h2>@ViewBag.ExperienceCount</h2>
+                    <p>Toplam Gelir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    // Grafik örneği (Chart.js kullanarak)
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Ocak', 'Şubat', 'Mart', 'Nisan'],
+            datasets: [{
+                label: 'Gelir',
+                data: [1200, 1900, 3000, 2500],
+                backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

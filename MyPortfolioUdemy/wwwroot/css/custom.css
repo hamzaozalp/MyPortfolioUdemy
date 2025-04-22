@@ -1,0 +1,18 @@
+﻿.progress {
+    background-color: #4CAF50;
+    height: 25px;
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+.skill-bars li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.progress span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}

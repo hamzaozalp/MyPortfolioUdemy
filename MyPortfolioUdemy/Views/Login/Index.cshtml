@@ -1,0 +1,128 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    body {
+        background-image: url('/Content/images/login-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-container {
+        max-width: 380px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px 35px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-header {
+        text-align: center;
+        background-color: #0056b3;
+        color: white;
+        padding: 15px;
+        margin: -30px -35px 25px;
+        border-radius: 8px 8px 0 0;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .form-control {
+        border-radius: 4px;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        height: auto;
+        border: 1px solid #ddd;
+    }
+
+        .form-control:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+        }
+
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        background-color: #0056b3;
+        border: none;
+    }
+
+    .btn-secondary {
+        background-color: #343a40;
+        border: none;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .forgot-password {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+        .forgot-password a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+            .forgot-password a:hover {
+                text-decoration: underline;
+            }
+</style>
+
+<div class="container">
+    <div class="login-container">
+        <div class="login-header">
+            Yönetim Paneli
+        </div>
+
+        <form method="post" action="/Login/Index">
+            <div class="form-group">
+                <label for="username" class="form-label">Kullanıcı Adı</label>
+                <input type="text" id="username" name="Username" class="form-control" placeholder="Kullanıcı adınızı girin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" id="password" name="Password" class="form-control" placeholder="Şifrenizi girin" required>
+            </div>
+
+            <div class="form-group mt-4">
+                <a href="/Dashboard/Index" class="btn btn-primary">Giriş Yap</button>
+                <a href="/Register/Index" class="btn btn-secondary">Kayıt Ol</a>
+            </div>
+
+            <div class="forgot-password">
+                <a href="/Account/ForgotPassword">Şifremi Unuttum</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -14,29 +14,44 @@ namespace MyPortfolioUdemy.Controllers
         public IActionResult ChangeIsReadToTrue(int id)
         {
             var value = context.Messages.Find(id);
-            value.IsRead = true;
-            context.SaveChanges();
+            if (value != null)
+            {
+                value.IsRead = true;
+                context.SaveChanges();
+            }
             return RedirectToAction("Inbox");
         }
 
         public IActionResult ChangeIsReadToFalse(int id)
         {
             var value = context.Messages.Find(id);
-            value.IsRead = false;
-            context.SaveChanges();
+            if (value != null)
+            {
+                value.IsRead = false;
+                context.SaveChanges();
+            }
             return RedirectToAction("Inbox");
         }
+
         public IActionResult DeleteMessage(int id)
         {
             var value = context.Messages.Find(id);
-            context.Messages.Remove(value);
-            context.SaveChanges();
+            if (value != null)
+            {
+                context.Messages.Remove(value);
+                context.SaveChanges();
+            }
             return RedirectToAction("Inbox");
         }
+
         public IActionResult MessageDetail(int id)
         {
             var value = context.Messages.Find(id);
+            if (value == null)
+            {
+                return NotFound();
+            }
             return View(value);
         }
-    }
+    } // Added missing closing brace here
 }

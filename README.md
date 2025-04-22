@@ -1,4 +1,4 @@
-Portföyo Uygulaması
+Portföyo Uygulaması 🚀🚀🚀
 
 Proje Hakkında
 Bu proje, Asp.Net Core kullanılarak geliştirilmiş bir portföyo uygulamasıdır. Projenin 1.ve 2.bölümünde aşağıdaki teknolojiler ve kavramlar uygulamalı olarak ele alınmıştır:
@@ -33,14 +33,14 @@ Bu repo'yu kopyalayın: https://github.com/hamzaozalp/MyPortfolioUdemy
 
 
 Kullanılan Teknolojiler:
-Asp.Net Core
+➡️ Asp.Net Core
 
-Entity Framework
+➡️ Entity Framework
 
-SQL
+➡️ SQL
 
-Bootstrap
+➡️ Bootstrap
 
-Javascript
+➡️ Javascript
 
-HTML/CSS
+➡️HTML/CSS

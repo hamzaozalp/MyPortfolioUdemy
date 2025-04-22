@@ -26,22 +26,21 @@ View: Kullanıcıya gösterilen ara yüzü içerir.
 
 Controller: Kullanıcı isteklerini yönetir ve gerekli işlemleri gerçekleştirir.
 
-Kurulum
+Kurulum 🚀
 Projeyi çalıştırmak için:
 
 Bu repo'yu kopyalayın: https://github.com/hamzaozalp/MyPortfolioUdemy
 
 
-Kullanılan Teknolojiler:
+Kullanılan Teknolojiler: 
+📍 Asp.Net Core
 
-➡️ Asp.Net Core
+📍 Entity Framework
 
-➡️ Entity Framework
+📍 SQL
 
-➡️ SQL
+📍 Bootstrap
 
-➡️ Bootstrap
+📍Javascript
 
-➡️ Javascript
-
-➡️HTML/CSS
+📍HTML/CSS

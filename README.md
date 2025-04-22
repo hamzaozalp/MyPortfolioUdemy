@@ -33,6 +33,7 @@ Bu repo'yu kopyalayın: https://github.com/hamzaozalp/MyPortfolioUdemy
 
 
 Kullanılan Teknolojiler:
+
 ➡️ Asp.Net Core
 
 ➡️ Entity Framework
